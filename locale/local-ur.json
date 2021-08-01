@@ -1,0 +1,23 @@
+{
+    "firstName": "پہلا نام",
+    "lastName": "آخری نام",
+    "Submit": "جمع کرائیں",
+    "BUTTON_LANG": "URDU",
+    "Name":"نام",
+    "Department":"شعبہ",
+    "Status":"حالت",
+    "Close":"بند کریں",
+    "Edit":"ترمیم",
+    "Delete":"حذف کریں",
+    "Id":"شناخت",
+    "Enter Employee Name":"ملازم کا نام درج کریں",
+    "Enter Department":" محکمہ داخل کریں",
+    "Enter Status":"اسٹیٹس درج کریں",
+    "All Employee Details":"ملازمین کی تمام تفصیلات",
+    "Home":"ہوم پیج",
+    "About":"کے بارے میں",
+    "Contact":"رابطہ کریں",
+    "Update":"اپ ڈیٹ",
+    "Employee Edit":"ملازم ترمیم کریں",
+    "Back":"پیچھے"
+}

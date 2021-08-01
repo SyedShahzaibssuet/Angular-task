@@ -1,0 +1,77 @@
+<div class="container">
+    <hr>
+    <h2>{{'All Employee Details' | translate}}</h2>
+
+
+    <button ng-show="lang === 'ur'" ng-click="changeLanguage('en')" class="btn btn-info btn-sm">{{'BUTTON_LANG' |
+        translate |
+        uppercase}}</button>
+
+    <button ng-show="lang === 'en'" ng-click="changeLanguage('ur')" class="btn btn-info btn-sm">{{'BUTTON_LANG' |
+        translate |
+        uppercase}}</button>
+
+
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="email">{{'Name' | translate}}</label>
+                <input type="text" class="form-control" id="email" placeholder="{{'Enter Employee Name' | translate}}"
+                    ng-model="newemployee.Name">
+            </div>
+            <div class="form-group">
+                <label for="pwd">{{'Department' | translate}}</label>
+                <input type="text" class="form-control" id="pwd" placeholder="{{'Enter Department' | translate}}"
+                    ng-model="newemployee.Department">
+            </div>
+            <div class="form-group">
+                <label for="pwd">{{'Status' | translate}}</label>
+                <input type="text" class="form-control" id="pwd" placeholder="{{'Enter Status' | translate}}"
+                    ng-model="newemployee.Status">
+            </div>
+            <div class="form-group" style="margin-top: 10px;">
+                <button type="submit" class="btn btn-success" ng-click="saveemployee()">{{'Submit' |
+                    translate}}</button>
+                <button type="button" class="btn btn-danger">{{'Close' | translate}}</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="alert alert-info" ng-if="message">
+        <hr>
+        {{message}}
+        <a href="#" class="close" aria-label="close" ng-click="clearmessage()">
+            &times;
+        </a>
+    </div>
+    <span class="clearfix"></span>
+    <hr>
+</div>
+<div class="container">
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th scope="col">{{'Id' | translate}}</th>
+                <th scope="col">{{'Name' | translate}}</th>
+                <th scope="col">{{'Department' | translate}}</th>
+                <th scope="col">{{'Status' | translate}}</th>
+                <th scope="col">{{'Edit' | translate}}</th>
+                <th scope="col">{{'Delete' | translate}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="employee in Employees">
+                <td>{{employee.Id}}</td>
+                <td>{{employee.Name}}</td>
+                <td>{{employee.Department}}</td>
+                <td>{{employee.Status}}</td>
+                <td>
+                    <button class="btn btn-primary" ng-click="goedit(employee)">{{'Edit' | translate}}</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" ng-click="deleteemployee(employee)">{{'Delete' | translate}}</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

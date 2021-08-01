@@ -1,0 +1,23 @@
+{
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "Submit": "Submit",
+    "Name":"Name",
+    "Department":"Department",
+    "Status":"Status",
+    "BUTTON_LANG": "ENGLISH",
+    "Close":"Close",
+    "Edit":"Edit",
+    "Delete":"Delete",
+    "Id":"Id",
+    "Enter Employee Name":"Enter Employee Name",
+    "Enter Department":"Enter Department",
+    "Enter Status":"Enter Status",
+    "All Employee Details":"All Employee",
+    "Home":"Home",
+    "About":"About",
+    "Contact":"Contact",
+    "Update":"Update",
+    "Employee Edit":"Employee Edit",
+    "Back":"Back"
+}

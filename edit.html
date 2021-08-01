@@ -1,0 +1,33 @@
+<div class="container">
+    <hr>
+<h2>{{'Employee Edit'| translate}}</h2>
+<button ng-show="lang === 'ur'" ng-click="changeLanguage('en')" class="btn btn-info btn-sm">{{'BUTTON_LANG' |
+    translate |
+    uppercase}}</button>
+
+<button ng-show="lang === 'en'" ng-click="changeLanguage('ur')" class="btn btn-info btn-sm">{{'BUTTON_LANG' |
+    translate |
+    uppercase}}</button>
+    <hr>
+    <form>
+        <div class="form-group">
+            <label for="email">{{'Name' | translate}}</label>
+            <input type="text" class="form-control" id="email" placeholder="{{'Enter Employee Name' | translate}}"
+                ng-model="NewEmployee.Name">
+        </div>
+        <div class="form-group">
+            <label for="pwd">{{'Department' | translate}}</label>
+            <input type="text" class="form-control" id="pwd" placeholder="{{'Enter Department' | translate}}"
+                ng-model="NewEmployee.Department">
+        </div>
+        <div class="form-group">
+            <label for="pwd">{{'Status' | translate}}</label>
+            <input type="text" class="form-control" id="pwd" placeholder="{{'Enter Status' | translate}}"
+                ng-model="NewEmployee.Status">
+        </div>
+        <div class="form-group" style="margin-top: 10px;">
+            <button type="submit" class="btn btn-success" ng-click="updateemployee(NewEmployee)">{{'Update' |
+                translate}}</button>
+            <button type="button" class="btn btn-danger" ng-click="goback()">{{'Back' | translate}}</button>
+        </div>
+    </form>

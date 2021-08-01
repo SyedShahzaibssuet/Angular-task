@@ -1,0 +1,68 @@
+<div class="container" ng-controller="MyCtrl">
+    <div class="jumbotron py-3">
+        <h1 class="text-center">
+            {{title}}
+        </h1>
+        <p class="pt-3"> 
+            this is my Coronavaris page for finding cases relative country
+        </p>
+        <!-- All data  -->
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card bg-warning text-white" style="border-radius:10px;">
+                    <div class="card-body">
+                        <h3>Confirmed Cases</h3>
+                        <h3>{{alldata.confirmed.value}}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-success text-white" style="border-radius:10px;">
+                    <div class="card-body">
+                        <h3>Recoverd Cases</h3>
+                        <h3>{{alldata.recovered.value}}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-danger text-white" style="border-radius:10px;">
+                    <div class="card-body">
+                        <h3>Death Cases</h3>
+                        <h3>{{alldata.deaths.value}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End data  -->
+        <!-- <button ng-click="changevalue()">Button</button> -->
+        <input type="text" ng-model="countryname" ng-change="getdatacountry()" class="form-control mt-3" placeholder="Enter Country Name">
+        <h1 class="text-center mt-4 text-uppercase">{{countryname}} Status</h1>
+        <div class="row text-center" ng-if="countryname">
+            <div class="col-md-4">
+                <div class="card bg-warning text-white" style="border-radius:10px;">
+                    <div class="card-body">
+                        <h3>Confirmed Cases</h3>
+                        <h3>{{countrydata.confirmed.value}}</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card bg-success text-white" style="border-radius:10px;">
+                    <div class="card-body">
+                        <h3>Recoverd Cases</h3>
+                        <h3>{{countrydata.recovered.value}}</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card bg-danger text-white" style="border-radius:10px;">
+                    <div class="card-body">
+                        <h3>Death Cases</h3>
+                        <h3>{{countrydata.deaths.value}}</h3>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>    
